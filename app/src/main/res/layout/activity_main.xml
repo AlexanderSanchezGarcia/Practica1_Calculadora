@@ -8,9 +8,9 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="379dp"
-        android:layout_height="131dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
@@ -26,12 +26,11 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="184dp"
+        android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:gravity="center|left"
         android:onClick="onClickButton0"
         android:text="0"
         android:textSize="34sp"
@@ -46,8 +45,6 @@
         android:layout_height="85dp"
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
         android:layout_marginBottom="16dp"
         android:onClick="onClickButtonDot"
         android:text="."
@@ -55,20 +52,19 @@
         app:backgroundTint="#323232"
         app:cornerRadius="50px"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonEqual"
         app:layout_constraintStart_toEndOf="@+id/button0" />
 
     <Button
         android:id="@+id/buttonEqual"
         android:layout_width="85dp"
-        android:layout_height="184dp"
+        android:layout_height="85dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:onClick="onClickEqual"
         android:text="="
         android:textSize="34sp"
-        app:backgroundTint="#04BC6C"
+        app:backgroundTint="#03834B"
         app:cornerRadius="50px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -77,16 +73,16 @@
         android:id="@+id/buttonPlus"
         android:layout_width="85dp"
         android:layout_height="85dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="16dp"
         android:onClick="onClickSum"
         android:text="+"
         android:textSize="34sp"
         app:backgroundTint="#04BC6C"
         app:cornerRadius="50px"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEqual"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEqual" />
 
     <Button
         android:id="@+id/button3"
@@ -184,28 +180,73 @@
         android:layout_height="85dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="12dp"
         android:onClick="onClickMinus"
         android:text="-"
         android:textSize="34sp"
         app:backgroundTint="#04BC6C"
         app:cornerRadius="50px"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEqual"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/buttonPer"
         android:layout_width="85dp"
         android:layout_height="85dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="12dp"
         android:onClick="onClickMulti"
         android:text="x"
         android:textSize="34sp"
         app:backgroundTint="#04BC6C"
         app:cornerRadius="50px"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMidst"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSen"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="onClickButtonSen"
+        android:text="sen"
+        android:textSize="20sp"
+        app:backgroundTint="#04BC6C"
+        app:cornerRadius="50px"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear" />
+
+    <Button
+        android:id="@+id/buttonCos"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="onClickButtonCos"
+        android:text="cos"
+        android:textSize="20sp"
+        app:backgroundTint="#04BC6C"
+        app:cornerRadius="50px"
         app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTan" />
+
+    <Button
+        android:id="@+id/buttonTan"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="onClickButtonTan"
+        android:text="tan"
+        android:textSize="20sp"
+        app:backgroundTint="#04BC6C"
+        app:cornerRadius="50px"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPer"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
@@ -255,13 +296,13 @@
 
     <Button
         android:id="@+id/buttonClear"
-        android:layout_width="184dp"
+        android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="12dp"
         android:onClick="onClickButtonClear"
-        android:text="C"
+        android:text="AC"
         android:textColor="#04BC6C"
         android:textSize="34sp"
         app:backgroundTint="#E8E8E8"
